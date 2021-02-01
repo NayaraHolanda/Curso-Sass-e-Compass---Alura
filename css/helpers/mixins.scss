@@ -1,0 +1,38 @@
+//////////////// Mixins usados no meu Sass
+
+// @mixin borda-arredondada($raio:10px) {
+//     -webkit-border-radius: $raio;
+//     border-radius: $raio;
+// }
+
+@mixin footer-content ($value: 0) {
+  content: "";
+  top: $value;
+  left: $value;
+  bottom: $value;
+  right: $value;
+  position: absolute;
+  z-index: -1;
+}
+
+//////////////// Placeholder
+%image-replacement {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+// %sombra-padrao {
+//   -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+//   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+// }
+
+//////////////// Função
+
+@function multiplica-pela-fonte($multiplicador) {
+  @return round($multiplicador * $tamanho-fonte-padrao);
+}
+
+//////////////// Utilizando box-shadow e box-radius do compass, que já colocam os prefixos necessários
+@import "compass/css3";
+@import "compass/utilities";
