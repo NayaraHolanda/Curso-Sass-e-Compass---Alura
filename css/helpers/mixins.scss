@@ -15,6 +15,10 @@
   z-index: -1;
 }
 
+@mixin sombra-padrao {
+  @include box-shadow(black 0 2px 10px);
+}
+
 //////////////// Placeholder
 %image-replacement {
   text-indent: -9999px;
